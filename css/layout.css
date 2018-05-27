@@ -1,6 +1,15 @@
-.grid-container {
+.grid {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 150px 300px 150px;
+}
+
+header, main, footer {
+    grid-column: 1 / -1;
+}
+
+header {
+    background: url(../img/cool-background.png) no-repeat;
+    background-size: cover;
 }
