@@ -5,13 +5,14 @@
 :root {
     --black: #272727;
     --blue: #6559f3;
+    --white: #fcfcfc;
 }
 
 html {
     border-style: border-box;
     font-family: -apple-system, Helvetica, sans-serif;
     font-weight: 900;
-    font-size: 10px;
+    font-size: 14px;
     color: var(--blue);
 }
 
@@ -38,7 +39,16 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 5px 0;
+    color: var(--black);
+    margin: 0 0 5px 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
 }
 
 /* Each item in our grid will contain numbers */

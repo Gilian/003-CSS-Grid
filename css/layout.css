@@ -1,15 +1,74 @@
+/*
+** === Insert the layout with mostly CSS-Grid techniques ===
+*/
 .grid {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 150px 300px 150px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 150px fit-content(300px) 150px;
 }
-
-header, main, footer {
-    grid-column: 1 / -1;
-}
-
 header {
     background: url(../img/cool-background.png) no-repeat;
     background-size: cover;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    grid-template-rows: minmax(150px, 1fr) minmax(150px, 1fr) 100px;
+    grid-template-areas: 
+        "headline       social-media"
+        "subheadline    social-media"
+        "navigation     .           "
 }
+
+/* —-- Layout the header —-- */
+header .headline {
+    grid-area: headline;
+}
+
+header .subheadline {
+    grid-area: subheadline;
+}
+
+header .navbar {
+    grid-area: navigation;
+}
+
+header .social-media {
+    grid-area: social-media;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-areas: 
+        "headline       headline    "
+        "subheadline    subheadline "
+        "navigation     navigation  "
+    }
+    header .social-media {
+        display: none;
+    }
+}
+
+.navbar--horizontal {
+    display: grid;
+}
+
+.navbar--horizontal-links {
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    display: inline-block;
+    font-size: 2rem;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.navbar--horizontal > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+}
+
+.navbar--horizontal-links--last {
+    grid-column: auto / -1;
+}
+
