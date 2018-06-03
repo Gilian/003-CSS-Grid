@@ -12,7 +12,7 @@ header {
     background-size: cover;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: [content-start] 1fr [social-media-start] 120px [social-media-end];
     grid-template-rows: minmax(150px, 1fr) minmax(150px, 1fr) 100px;
     grid-template-areas: 
         "headline       social-media"
