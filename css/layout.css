@@ -1,12 +1,8 @@
 /*
 ** === Insert the layout with mostly CSS-Grid techniques ===
 */
-.grid {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: 150px fit-content(300px) 150px;
-}
+
+/* —-- Layout the header —-- */
 header {
     background: url(../img/cool-background.png) no-repeat;
     background-size: cover;
@@ -17,10 +13,9 @@ header {
     grid-template-areas: 
         "headline       social-media"
         "subheadline    social-media"
-        "navigation     .           "
+        "navigation     .           ";
 }
 
-/* —-- Layout the header —-- */
 header .headline {
     grid-area: headline;
 }
@@ -37,6 +32,7 @@ header .social-media {
     grid-area: social-media;
 }
 
+/* —-- Header: Media Queries —-- */
 @media screen and (max-width: 768px) {
     header {
         grid-template-areas: 
@@ -49,6 +45,7 @@ header .social-media {
     }
 }
 
+/* —-- Navbar —-- */
 .navbar--horizontal {
     display: grid;
 }
@@ -72,3 +69,28 @@ header .social-media {
     grid-column: auto / -1;
 }
 
+/* —-- Albums —-- */
+.albums {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.album {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.album__artwork {
+    width: 100%;
+}
+
+.album__details h2,
+.album__details p {
+    color: white;
+    font-size: 16px;
+}
