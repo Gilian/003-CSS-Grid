@@ -1,36 +1,39 @@
 /*
 ** === Basic Styles ===
 */
+
 /* Variables */
+
 :root {
-    --black: #272727;
-    --blue: #6559f3;
-    --white: #fcfcfc;
+  --black: #272727;
+  --blue: #6559f3;
+  --white: #fcfcfc;
 }
 
 html {
-    border-style: border-box;
-    font-family: -apple-system, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 14px;
-    color: var(--blue);
+  border-style: border-box;
+  font-family: -apple-system, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--blue);
 }
 
 /* Apparently better than directly calling it */
+
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    background-attachment: fixed;
-    background-image: url("../img/topography.svg"),
-        linear-gradient(110deg, #f93d66, #6d47d9);
-    background-size: 340px, auto;
-    min-height: calc(100vh - 100px);
-    margin: 50px;
-    letter-spacing: -1px;
+  background-attachment: fixed;
+  background-image: url("../img/topography.svg"),
+    linear-gradient(110deg, #f93d66, #6d47d9);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  letter-spacing: -1px;
 }
 
 h1,
@@ -39,19 +42,20 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--black);
-    margin: 0 0 5px 0;
+  color: var(--black);
+  margin: 0 0 5px 0;
 }
 
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h2 {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 /* Each item in our grid will contain numbers */
+
 .item {
   color: var(--black);
   background-color: var(--blue);
